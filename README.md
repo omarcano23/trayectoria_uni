@@ -1,74 +1,79 @@
 # TrayectorIA UNI 💡
-Este proyecto tiene como objetivo desarrollar un sistema de trazabilidad para monitorizar y analizar el desempeño académico de los estudiantes desde su admisión hasta su graduación. Usando técnicas de análisis de datos y modelos predictivos, el proyecto busca identificar factores críticos que influyen en el éxito o el abandono académico, permitiendo la implementación de intervenciones tempranas y efectivas. Posteriormente, mediante el uso de Inteligencia Artificial, generar recomendaciones y programas personalizados para abordar a aquellos estudiantes con mayor probabilidad de deserción a fin de mejorar su calidad educativa y volver a traerlos al camino del éxito.
+This project aims to develop a traceability system to monitor and analyze students' academic performance from admission to graduation. Using data analysis techniques and predictive models, the project seeks to identify critical factors that influence academic success or dropout, enabling the implementation of early and effective interventions. Subsequently, through the use of Artificial Intelligence, it will generate recommendations and personalized programs to address those students most likely to drop out in order to improve their educational quality and bring them back on the path to success.
 
 ![image](https://github.com/user-attachments/assets/ca93ffd7-c26f-47a6-9783-0dc0052086b8)
 ![image](https://github.com/user-attachments/assets/6aa43b85-7961-4216-9b9d-ac55544cb279)
 
+📁 Project Structure
 
-Descripción de Carpetas Principales 📃
+The repository is organized into four main sections, following a clear and reproducible workflow for data analysis, model development, and reporting.
 
-- 01_Diagnostico_Preparacion: Contiene los pasos iniciales del proyecto, incluyendo la configuración del entorno, análisis descriptivo, limpieza de datos, y análisis de clusterización.
+1. data/
+Contains the datasets used for the public version of the project.
+01.data_final.csv
+Final processed dataset with anonymized and synthetic values for reproducibility.
+02.images.csv
+File containing metadata or links related to images used in the dashboard and documentation.
 
-  - Configuracion_Entorno: Instrucciones para configurar el entorno de desarrollo en Visual Studio Code (VSC) usando Python.
-  - Descripcion_Desercion: Notebooks y visualizaciones iniciales para entender las características de la deserción.
-  - Limpieza_Datos: Procesos de limpieza y transformación de los datos.
+2. notebooks/
+Jupyter notebooks that walk through the analytical and modeling workflow.
+01_eda.ipynb — Exploratory data analysis.
+02_data_prep.ipynb — Data preparation and cleansing workflow.
+03_feature_engineering.ipynb — Creation and transformation of predictive features.
+04_target_dropout.ipynb — Construction of the dropout target definition and labeling logic.
+05_target_validation.ipynb — Validation of target consistency, distribution checks, and quality assurance.
+These notebooks represent the diagnostic and preparation phase of the project.
 
-- 02_Modelos_Predictivos: Incluye el desarrollo, validación y generación de predicciones mediante modelos de machine learning.
+3. src/
+Source files for modeling and visualization.
+01.model_train.ipynb — Model development (e.g., Logistic Regression, Decision Trees, and baseline comparisons).
+02.model_test.ipynb — Model evaluation using accuracy, recall, F1-score, and AUC, including OOT-like validation.
+03.trayectoria_uni.pbix — Power BI dashboard file illustrating key insights, model outputs, and institutional reporting views.
 
-  - Desarrollo_Modelos: Notebooks para el desarrollo de modelos como regresión logística y árboles de decisión.
-  - Validacion_Modelos: Evaluación de los modelos usando métricas como precisión, recall y F1-score.
-  
-- 03_Visualizacion_Comunicacion: Dedicado a la visualización de los resultados en Power BI y la creación del informe final.
+4. docs/
+Documentation and communication materials.
+01.presentation-trayectoria-uni.pdf — Final project presentation.
+02.presentation-trayectoria-uni.pptx — Editable version of the final presentation.
+03.methodology_flow.docx — Detailed methodology document describing the analytical pipeline and modeling framework.
 
-  - PowerBI: Archivos de configuración y dashboards interactivos en Power BI.
-  - Informe_Final: Informe final del proyecto en PDF y presentación de resultados.
-  - Publicaciones: Archivos relacionados con la publicación en plataformas requeridas.
+📝 Overview
+This project develops a machine-learning framework to predict university dropout risk using anonymized student records. The solution integrates:
+- Exploratory data analysis
+- Feature engineering
+- Predictive modeling (ML)
+- Validation and interpretability
+- Dashboard visualization using Power BI
 
-- 04_Documentacion: Resumen de las fases del proyecto.
+The goal is to provide institutions with early-warning signals and support evidence-based interventions that reduce student attrition.
 
-- 05_Datos: Almacena los datos utilizados en el proyecto.
+📦 Requirements
+- Tools & Environment
+- Python 3.x
+- Visual Studio Code (recommended)
+- Power BI Desktop
+- Jupyter Notebook
 
-  - Datos_Crudos: Archivos de datos originales sin procesar.
-  - Datos_Procesados: Archivos de datos después de la limpieza y transformación a nivel intermedio.
-  - Datos_Finales: Archivos de datos después de los ajustes totales, listas para utilizar en modelos y visualizaciones.
-  - Imágenes: Archivos de imágenes utilizadas en el dashboard.
+▶️ How to Use This Project
+1. Set Up the Environment
+- Clone this repository to your local machine.
+- Install dependencies using the command above.
+- Open the repository in Visual Studio Code or your preferred environment.
 
-Requisitos Previos 📝
+2. Run the Analysis
+- Start with the notebooks in the notebooks/ folder to explore, clean, and prepare the data.
+- Proceed to the src/ notebooks to train and evaluate predictive models.
+- Open the .pbix file in Power BI Desktop to explore the dashboard and its visual insights.
+Review the documentation in the docs/ folder for methodological details and presentation materials.
 
-- Herramientas Necesarias
-  Visual Studio Code (VSC): Editor de código recomendado.
-  Python 3.x: Lenguaje de programación utilizado para el análisis y modelado de datos.
-  Bibliotecas de Python: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, entre otras.
-  Power BI: Herramienta para la creación de visualizaciones interactivas.
+🤝 Contributing
+If you would like to contribute:
+- Fork the repository.
+- Create a feature branch: git checkout -b feature/new-feature
+- Commit your changes: git commit -am "Add new feature"
+- Push the branch: git push origin feature/new-feature
+- Open a Pull Request.
 
-- Instalación de Bibliotecas
-  Para instalar las bibliotecas necesarias, ejecuta el siguiente comando en tu terminal:
-  pip install -r requirements.txt
-
-Instrucciones de Uso 📰
-
-- Configuración del Entorno
-
-1. Clona este repositorio en tu máquina local.
-2. Instala las bibliotecas requeridas usando el comando mencionado anteriormente.
-3. Abre el proyecto en Visual Studio Code.
-
-- Ejecución del Proyecto
-
-1. Sigue los pasos en los notebooks dentro de la carpeta 01_Diagnostico_Preparacion para el análisis descriptivo y la limpieza de datos.
-2. Desarrolla y valida los modelos predictivos utilizando los notebooks en 02_Modelos_Predictivos.
-3. Conecta el proyecto a Power BI y crea visualizaciones interactivas siguiendo las instrucciones en 03_Visualizacion_Comunicacion.
-4. Genera el informe final y publica los resultados en las plataformas requeridas.
-
-Contribuciones 📊
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una rama para tu característica (git checkout -b feature/nueva-caracteristica).
-3. Haz commit de tus cambios (git commit -am 'Agrega nueva característica').
-4. Haz push a la rama (git push origin feature/nueva-caracteristica).
-5. Crea un Pull Request.
-
-Contacto
-Para cualquier duda o sugerencia, por favor contacta a Omar Cano Contreras en omarcanoc23@gmail.com o https://www.linkedin.com/in/omarcanoc23/.
- 
+📬 Contact
+For questions or suggestions, feel free to reach out Omar Cano Contreras
+📧 omarcanoc23@gmail.com
+🔗 www.linkedin.com/in/omarcanoc23/
