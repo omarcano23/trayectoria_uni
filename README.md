@@ -10,31 +10,28 @@ The repository is organized into four main sections, following a clear and repro
 
 1. data/
 Contains the datasets used for the public version of the project.
-01.data_final.csv
-Final processed dataset with anonymized and synthetic values for reproducibility.
-02.images.csv
-File containing metadata or links related to images used in the dashboard and documentation.
+- 01.data_final.csv - Final processed dataset with anonymized and synthetic values for reproducibility.
+- 02.images.csv - File containing metadata or links related to images used in the dashboard and documentation.
 
 2. notebooks/
 Jupyter notebooks that walk through the analytical and modeling workflow.
-01_eda.ipynb — Exploratory data analysis.
-02_data_prep.ipynb — Data preparation and cleansing workflow.
-03_feature_engineering.ipynb — Creation and transformation of predictive features.
-04_target_dropout.ipynb — Construction of the dropout target definition and labeling logic.
-05_target_validation.ipynb — Validation of target consistency, distribution checks, and quality assurance.
-These notebooks represent the diagnostic and preparation phase of the project.
+- 01_eda.ipynb - Exploratory data analysis.
+- 02_data_prep.ipynb - Data preparation and cleansing workflow.
+- 03_feature_engineering.ipynb - Creation and transformation of predictive features.
+- 04_target_dropout.ipynb - Construction of the dropout target definition and labeling logic.
+- 05_target_validation.ipynb - Validation of target consistency, distribution checks, and quality assurance.
 
 3. src/
 Source files for modeling and visualization.
-01.model_train.ipynb — Model development (e.g., Logistic Regression, Decision Trees, and baseline comparisons).
-02.model_test.ipynb — Model evaluation using accuracy, recall, F1-score, and AUC, including OOT-like validation.
-03.trayectoria_uni.pbix — Power BI dashboard file illustrating key insights, model outputs, and institutional reporting views.
+- 01.model_train.ipynb - Model development (e.g., Logistic Regression, Decision Trees, and baseline comparisons).
+- 02.model_test.ipynb - Model evaluation using accuracy, recall, F1-score, and AUC, including OOT-like validation.
+- 03.trayectoria_uni.pbix - Power BI dashboard file illustrating key insights, model outputs, and institutional reporting views.
 
 4. docs/
 Documentation and communication materials.
-01.presentation-trayectoria-uni.pdf — Final project presentation.
-02.presentation-trayectoria-uni.pptx — Editable version of the final presentation.
-03.methodology_flow.docx — Detailed methodology document describing the analytical pipeline and modeling framework.
+- 01.presentation-trayectoria-uni.pdf - Final project presentation.
+- 02.presentation-trayectoria-uni.pptx - Editable version of the final presentation.
+- 03.methodology_flow.docx - Detailed methodology document describing the analytical pipeline and modeling framework.
 
 📝 Overview
 This project develops a machine-learning framework to predict university dropout risk using anonymized student records. The solution integrates:
